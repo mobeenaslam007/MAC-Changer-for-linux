@@ -59,7 +59,6 @@ def get_current_mac_addr(interface):
 
 def generate_random_mac():
     random_line_no = random.randint(1, 23055)
-    # print (i)
     with open("mac_vendor_codes.txt", "r") as mac_file:
         mac_vendor = mac_file.read().split("\n")[random_line_no]  
     vendor_code = mac_vendor[0:2] + ":" + mac_vendor[2:4] + ":" + mac_vendor[4:6]
